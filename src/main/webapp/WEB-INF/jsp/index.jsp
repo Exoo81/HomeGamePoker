@@ -7,6 +7,6 @@
 
 </head>
 <body>
-Start tiles ver 2.1
+Start tiles ver 2.1 
 </body>
 </html>
