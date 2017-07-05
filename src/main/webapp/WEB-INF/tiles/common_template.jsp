@@ -6,7 +6,7 @@
 <html>
 
 <head>
-
+<!-- HGP -->
 <!-- JQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
 		<!-- Resources -->
-		<spring:url value="/resources/css/style.css" var="styleCSS" />
+		<spring:url value="/resources/css/style.min.css" var="styleCSS" />
 		<%-- <spring:url value="/resources/js/tooltip.js" var="tooltipJS" />
 		<spring:url value="/resources/js/triggerRemove.js" var="triggerRemove" /> --%>
 		
@@ -28,11 +28,30 @@
 		<!-- Awesome fonts -->
 		<!-- <script src="https://use.fontawesome.com/969da422e1.js"></script> -->
 		<!-- Fonts -->
-		<!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
+		<link rel="stylesheet" href="resources/css/font-awesome.min.css">
+		<link rel="stylesheet" href="resources/css/fonts.googleapis.com.css">
+		
 		
 		<!-- JS -->
 		<%-- <script src="${tooltipJS}"></script> --%>
 		<%-- <script src="${triggerRemove}"></script> --%>
+		
+		
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" />
+		<![endif]-->
+		<!-- <link rel="stylesheet" href="assets/css/ace-rtl.min.css" /> -->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
 	
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><tiles:getAsString name="title" /></title>
