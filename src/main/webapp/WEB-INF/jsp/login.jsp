@@ -26,7 +26,7 @@
 							<div class="position-relative">
 							
 								<!-- Login Frame -->
-								<div id="login-box" class="login-box visible widget-box no-border">
+								<div id="login-box" class="login-box visible widget-box poker-green no-border">
 									<div class="widget-body">
 										<div class="widget-main">
 											<h4 class="header poker-green lighter bigger">
@@ -57,12 +57,11 @@
 
 													<div class="clearfix text-center">
 														<button type="button" class="width-65 btn btn-sm btn-primary btn-poker-green">
-															<i class="ace-icon fa fa-key"></i>
+															<i class="ace-icon fa fa-lock fa-lg"></i>
 															<span class="bigger-110">Login</span>
 														</button>
 													</div>
 
-													<div class="space-4"></div>
 												</fieldset>
 											</form>
 
@@ -73,47 +72,46 @@
 										<div class="toolbar clearfix">
 											<div>
 												<a href="#" data-target="#forgot-box" class="forgot-password-link">
-													<i class="ace-icon fa fa-arrow-left"></i>
-													I forgot my password
+													Forgot password
+													<i class="ace-icon fa fa-question"></i>
 												</a>
 											</div>
 
 											<div>
 												<a href="#" data-target="#signup-box" class="user-signup-link">
-													I want to register
-													<i class="ace-icon fa fa-arrow-right"></i>
+													Create account
+													<i class="ace-icon fa fa-sign-in"></i>
 												</a>
 											</div>
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.login-box -->
 
-								<div id="forgot-box" class="forgot-box widget-box no-border">
+
+								<!-- Forgot Frame -->
+								<div id="forgot-box" class="forgot-box widget-box poker-red no-border">
 									<div class="widget-body">
 										<div class="widget-main">
-											<h4 class="header red lighter bigger">
-												<i class="ace-icon fa fa-key"></i>
+											<h4 class="header poker-red lighter bigger">
+												<i class="ace-icon fa fa-key poker-red"></i>
 												Retrieve Password
 											</h4>
-
-											<div class="space-6"></div>
-											<p>
-												Enter your email and to receive instructions
-											</p>
-
+											<!-- Forgot Form -->
 											<form>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="ace-icon fa fa-envelope"></i>
+															<input type="email" class="form-control" placeholder="Enter your email to receive instructions" />
+															<i class="ace-icon-poker-red fa fa-envelope"></i>
 														</span>
 													</label>
+													
+													<div class="space"></div>
 
-													<div class="clearfix">
-														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
-															<i class="ace-icon fa fa-lightbulb-o"></i>
-															<span class="bigger-110">Send Me!</span>
+													<div class="clearfix text-center">
+														<button type="button" class="width-65 btn btn-sm btn-primary btn-poker-red">
+															<i class="ace-icon fa fa-paper-plane fa-lg"></i>
+															<span class="bigger-110">Send Me !</span>
 														</button>
 													</div>
 												</fieldset>
@@ -129,16 +127,14 @@
 									</div><!-- /.widget-body -->
 								</div><!-- /.forgot-box -->
 
-								<div id="signup-box" class="signup-box widget-box no-border">
+								<!-- Registration Frame -->
+								<div id="signup-box" class="signup-box widget-box poker-blue no-border">
 									<div class="widget-body">
 										<div class="widget-main">
-											<h4 class="header green lighter bigger">
-												<i class="ace-icon fa fa-users blue"></i>
+											<h4 class="header poker-blue lighter bigger">
+												<i class="ace-icon fa fa-users poker-blue"></i>
 												New User Registration
 											</h4>
-
-											<div class="space-6"></div>
-											<p> Enter your details to begin: </p>
 
 											<form>
 												<fieldset>
@@ -170,26 +166,11 @@
 														</span>
 													</label>
 
-													<label class="block">
-														<input type="checkbox" class="ace" />
-														<span class="lbl">
-															I accept the
-															<a href="#">User Agreement</a>
-														</span>
-													</label>
 
-													<div class="space-24"></div>
-
-													<div class="clearfix">
-														<button type="reset" class="width-30 pull-left btn btn-sm">
-															<i class="ace-icon fa fa-refresh"></i>
-															<span class="bigger-110">Reset</span>
-														</button>
-
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
-															<span class="bigger-110">Register</span>
-
-															<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+													<div class="clearfix text-center">
+														<button type="button" class="width-65 btn btn-sm btn-primary btn-poker-blue">
+															<i class="ace-icon fa fa-sign-in fa-lg"></i>
+															<span class="bigger-110">Sign in</span>
 														</button>
 													</div>
 												</fieldset>
@@ -212,7 +193,6 @@
 		</div><!-- /.main-container -->
 
 		<!-- basic scripts -->
-
 
 
 		<!--[if IE]>
