@@ -29,10 +29,10 @@
 								<div id="login-box" class="login-box visible widget-box poker-green no-border">
 									<div class="widget-body">
 										<div class="widget-main">
-											<h4 class="header poker-green lighter bigger">
+											<h3 class="header poker-green lighter bigger">
 												<i class="ace-icon fa fa-hand-o-right poker-green" aria-hidden="true"></i>
 												Sign In
-											</h4>
+											</h3>
 
 											<div class="space-6"></div>
 											
@@ -56,7 +56,7 @@
 													<div class="space"></div>
 
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-sm btn-primary btn-poker-green">
+														<button type="button" class="width-65 btn btn-lg btn-primary btn-poker-green">
 															<i class="ace-icon fa fa-lock fa-lg"></i>
 															<span class="bigger-110">Login</span>
 														</button>
@@ -92,10 +92,10 @@
 								<div id="forgot-box" class="forgot-box widget-box poker-red no-border">
 									<div class="widget-body">
 										<div class="widget-main">
-											<h4 class="header poker-red lighter bigger">
+											<h3 class="header poker-red lighter bigger">
 												<i class="ace-icon fa fa-key poker-red"></i>
 												Retrieve Password
-											</h4>
+											</h3>
 											<!-- Forgot Form -->
 											<form>
 												<fieldset>
@@ -109,7 +109,7 @@
 													<div class="space"></div>
 
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-sm btn-primary btn-poker-red">
+														<button type="button" class="width-65 btn btn-lg btn-primary btn-poker-red">
 															<i class="ace-icon fa fa-paper-plane fa-lg"></i>
 															<span class="bigger-110">Send Me !</span>
 														</button>
@@ -131,44 +131,44 @@
 								<div id="signup-box" class="signup-box widget-box poker-blue no-border">
 									<div class="widget-body">
 										<div class="widget-main">
-											<h4 class="header poker-blue lighter bigger">
+											<h3 class="header poker-blue lighter bigger">
 												<i class="ace-icon fa fa-users poker-blue"></i>
 												New User Registration
-											</h4>
+											</h3>
 
 											<form>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="email" class="form-control" placeholder="Email" />
-															<i class="ace-icon fa fa-envelope"></i>
+															<i class="ace-icon-poker-blue fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" class="form-control" placeholder="Username" />
-															<i class="ace-icon fa fa-user"></i>
+															<i class="ace-icon-poker-blue fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="password" class="form-control" placeholder="Password" />
-															<i class="ace-icon fa fa-lock"></i>
+															<i class="ace-icon-poker-blue fa fa-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="password" class="form-control" placeholder="Repeat password" />
-															<i class="ace-icon fa fa-retweet"></i>
+															<i class="ace-icon-poker-blue fa fa-retweet"></i>
 														</span>
 													</label>
 
 
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-sm btn-primary btn-poker-blue">
+														<button type="button" class="width-65 btn btn-lg btn-primary btn-poker-blue">
 															<i class="ace-icon fa fa-sign-in fa-lg"></i>
 															<span class="bigger-110">Sign in</span>
 														</button>
