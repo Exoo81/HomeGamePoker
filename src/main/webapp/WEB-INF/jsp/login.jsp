@@ -41,14 +41,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
-															<i class="ace-icon-poker-green fa fa-user"></i>
+															<input type="text" class="form-control txtFieldBigger" placeholder="Username" />
+															<i class="ace-icon-poker-green fa fa-user fa-lg"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" class="form-control txtFieldBigger" placeholder="Password" />
 															<i class="ace-icon-poker-green fa fa-lock"></i>
 														</span>
 													</label>
@@ -101,7 +101,7 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Enter your email to receive instructions" />
+															<input type="email" class="form-control txtFieldBigger" placeholder="Enter your email to receive instructions" />
 															<i class="ace-icon-poker-red fa fa-envelope"></i>
 														</span>
 													</label>
@@ -140,28 +140,28 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+															<input type="email" class="form-control txtFieldBigger" placeholder="Email" />
 															<i class="ace-icon-poker-blue fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control txtFieldBigger" placeholder="Username" />
 															<i class="ace-icon-poker-blue fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" class="form-control txtFieldBigger" placeholder="Password" />
 															<i class="ace-icon-poker-blue fa fa-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
+															<input type="password" class="form-control txtFieldBigger" placeholder="Repeat password" />
 															<i class="ace-icon-poker-blue fa fa-retweet"></i>
 														</span>
 													</label>
