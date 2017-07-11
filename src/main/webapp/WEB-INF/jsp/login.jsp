@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -37,18 +38,18 @@
 											<div class="space-6"></div>
 											
 											<!-- Login Form -->
-											<form>
+											<form action="<spring:url value="/login" />" method="POST">
 												<fieldset>
-													<label class="block clearfix">
+													<label class="block clearfix" for="inputUsername">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control txtFieldBigger" placeholder="Username" />
+															<input class="form-control txtFieldBigger" type="text" name="username" id="inputUsername" placeholder="Username" required autofocus />
 															<i class="ace-icon-poker-green fa fa-user fa-lg"></i>
 														</span>
 													</label>
 
-													<label class="block clearfix">
+													<label class="block clearfix" for="inputPassword">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control txtFieldBigger" placeholder="Password" />
+															<input class="form-control txtFieldBigger" type="password" name="password" id="inputPassword" placeholder="Password" required/>
 															<i class="ace-icon-poker-green fa fa-lock"></i>
 														</span>
 													</label>
@@ -56,7 +57,7 @@
 													<div class="space"></div>
 
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-lg btn-primary btn-poker-green">
+														<button type="submit" class="width-65 btn btn-lg btn-primary btn-poker-green">
 															<i class="ace-icon fa fa-lock fa-lg"></i>
 															<span class="bigger-110">Login</span>
 														</button>

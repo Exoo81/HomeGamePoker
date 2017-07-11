@@ -46,5 +46,7 @@
 	</bean>
 	
 	<jpa:repositories base-package="com.exoo.hgp.repository" entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager" />
+	
+	<import resource="security.xml"/>
 
 </beans>

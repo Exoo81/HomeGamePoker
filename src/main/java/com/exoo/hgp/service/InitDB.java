@@ -41,15 +41,14 @@ public class InitDB {
 		roleRepository.save(playerRole);
 		
 		User adminUser = new User();
-		adminUser.setUsername("exoo");
-		adminUser.setPassword("klocek12");
+		adminUser.setUsername("exoodb");
+		adminUser.setPassword("klocek123");
 		List<Role> adminRolesList = new ArrayList<Role>();
 			adminRolesList.add(adminRole);
 			adminRolesList.add(playerRole);
 		
 		adminUser.setRoles(adminRolesList);
 		userRepository.save(adminUser);
-
 		
 	}
 }
