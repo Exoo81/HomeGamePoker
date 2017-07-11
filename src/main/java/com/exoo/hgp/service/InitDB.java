@@ -31,6 +31,10 @@ public class InitDB {
 	
 	@PostConstruct
 	public void init(){
+		//createDB();
+	}
+	
+	private void createDB(){
 		
 		Role adminRole = new Role();
 		adminRole.setRoleName("ROLE_ADMIN");
