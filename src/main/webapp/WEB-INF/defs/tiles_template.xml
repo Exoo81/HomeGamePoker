@@ -10,16 +10,23 @@
 	
 	<definition name="login" extends="common">
 		<put-attribute name="title" value="Login Page - Home Game Poker" />
-		<!-- <put-attribute name="header" value="Login - " /> -->
+		<put-attribute name="header" value="" />
 		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
-		<!-- <put-attribute name="activePage" value="index" /> -->
+		<put-attribute name="activePage" value="index" />
 	</definition>
 
 	<definition name="index" extends="common">
-		<put-attribute name="title" value="Welcome Page" />
-		<!-- <put-attribute name="header" value="Welcome" /> -->
+		<put-attribute name="title" value="News - Home Game Poker" />
+		<put-attribute name="header" value="News" />
 		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
-		<!-- <put-attribute name="activePage" value="index" /> -->
+		<put-attribute name="activePage" value="index" />
+	</definition>
+	
+	<definition name="tournaments" extends="common">
+		<put-attribute name="title" value="Tournaments - Home Game Poker" />
+		<put-attribute name="header" value="Tournaments" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tournaments.jsp" />
+		<put-attribute name="activePage" value="tournaments" />
 	</definition>
 
 </tiles-definitions>

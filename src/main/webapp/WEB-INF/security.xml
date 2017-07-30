@@ -7,9 +7,13 @@
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<http>
+		<intercept-url pattern="/login**" access="! isAuthenticated()" />
 		<intercept-url pattern="/index**" access="isAuthenticated()" />
+		<intercept-url pattern="/tournaments**" access="isAuthenticated()" />
+		
 		<form-login login-page="/login.html" />
-		<logout />
+		
+		<logout logout-url="/logout" />
 		<csrf disabled="true" /> 									<!-- for spring security 4 -->
 	</http>
 

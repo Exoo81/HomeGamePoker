@@ -31,7 +31,7 @@ public class InitDB {
 	
 	@PostConstruct
 	public void init(){
-		//createDB();
+		createDB();
 	}
 	
 	private void createDB(){
@@ -45,7 +45,7 @@ public class InitDB {
 		roleRepository.save(playerRole);
 		
 		User adminUser = new User();
-		adminUser.setUsername("exoodb");
+		adminUser.setUsername("exoo");
 		adminUser.setPassword("klocek123");
 		List<Role> adminRolesList = new ArrayList<Role>();
 			adminRolesList.add(adminRole);

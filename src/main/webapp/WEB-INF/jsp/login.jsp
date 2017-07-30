@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ include file="../tiles/taglib.jsp" %>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -16,8 +16,8 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<div class="login-container">
 							<div class="center">
-								<h1>
-									<span class="red">Home</span>
+								<h1 class="bigger">
+									<span class="poker-red">Home</span>
 									<span class="white" id="id-text2">Game Poker</span>
 								</h1>
 							</div>
@@ -31,7 +31,7 @@
 									<div class="widget-body">
 										<div class="widget-main">
 											<h3 class="header poker-green lighter bigger">
-												<i class="ace-icon fa fa-hand-o-right poker-green" aria-hidden="true"></i>
+												<i class="poker-green-icon fa fa-hand-o-right poker-green" aria-hidden="true"></i>
 												Sign In
 											</h3>
 
@@ -43,22 +43,22 @@
 													<label class="block clearfix" for="inputUsername">
 														<span class="block input-icon input-icon-right">
 															<input class="form-control txtFieldBigger" type="text" name="username" id="inputUsername" placeholder="Username" required autofocus />
-															<i class="ace-icon-poker-green fa fa-user fa-lg"></i>
+															<i class="poker-green-icon fa fa-user fa-lg"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix" for="inputPassword">
 														<span class="block input-icon input-icon-right">
 															<input class="form-control txtFieldBigger" type="password" name="password" id="inputPassword" placeholder="Password" required/>
-															<i class="ace-icon-poker-green fa fa-lock"></i>
+															<i class="poker-green-icon fa fa-lock"></i>
 														</span>
 													</label>
 
 													<div class="space"></div>
 
 													<div class="clearfix text-center">
-														<button type="submit" class="width-65 btn btn-lg btn-primary btn-poker-green">
-															<i class="ace-icon fa fa-lock fa-lg"></i>
+														<button type="submit" class="width-65 btn btn-xlg btn-primary btn-poker-green">
+															<i class="poker-green-icon fa fa-lock fa-lg"></i>
 															<span class="bigger-110">Login</span>
 														</button>
 													</div>
@@ -74,14 +74,14 @@
 											<div>
 												<a href="#" data-target="#forgot-box" class="forgot-password-link">
 													Forgot password
-													<i class="ace-icon fa fa-question"></i>
+													<i class="fa fa-question"></i>
 												</a>
 											</div>
 
 											<div>
 												<a href="#" data-target="#signup-box" class="user-signup-link">
 													Create account
-													<i class="ace-icon fa fa-sign-in"></i>
+													<i class="fa fa-sign-in"></i>
 												</a>
 											</div>
 										</div>
@@ -94,7 +94,7 @@
 									<div class="widget-body">
 										<div class="widget-main">
 											<h3 class="header poker-red lighter bigger">
-												<i class="ace-icon fa fa-key poker-red"></i>
+												<i class="poker-red-icon fa fa-key poker-red"></i>
 												Retrieve Password
 											</h3>
 											<!-- Forgot Form -->
@@ -102,16 +102,16 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control txtFieldBigger" placeholder="Enter your email to receive instructions" />
-															<i class="ace-icon-poker-red fa fa-envelope"></i>
+															<input type="email" class="form-control txtFieldBigger" placeholder="Enter your email" />
+															<i class="poker-red-icon fa fa-envelope"></i>
 														</span>
 													</label>
 													
 													<div class="space"></div>
 
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-lg btn-primary btn-poker-red">
-															<i class="ace-icon fa fa-paper-plane fa-lg"></i>
+														<button type="button" class="width-65 btn btn-xlg btn-primary btn-poker-red">
+															<i class="poker-red-icon fa fa-paper-plane fa-lg"></i>
 															<span class="bigger-110">Send Me !</span>
 														</button>
 													</div>
@@ -122,7 +122,7 @@
 										<div class="toolbar center">
 											<a href="#" data-target="#login-box" class="back-to-login-link">
 												Back to login
-												<i class="ace-icon fa fa-arrow-right"></i>
+												<i class="poker-green-icon fa fa-arrow-right"></i>
 											</a>
 										</div>
 									</div><!-- /.widget-body -->
@@ -133,7 +133,7 @@
 									<div class="widget-body">
 										<div class="widget-main">
 											<h3 class="header poker-blue lighter bigger">
-												<i class="ace-icon fa fa-users poker-blue"></i>
+												<i class="poker-blue-icon fa fa-users poker-blue"></i>
 												New User Registration
 											</h3>
 
@@ -142,35 +142,36 @@
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="email" class="form-control txtFieldBigger" placeholder="Email" />
-															<i class="ace-icon-poker-blue fa fa-envelope"></i>
+															<i class="poker-blue-icon fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" class="form-control txtFieldBigger" placeholder="Username" />
-															<i class="ace-icon-poker-blue fa fa-user"></i>
+															<i class="poker-blue-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="password" class="form-control txtFieldBigger" placeholder="Password" />
-															<i class="ace-icon-poker-blue fa fa-lock"></i>
+															<i class="poker-blue-icon fa fa-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="password" class="form-control txtFieldBigger" placeholder="Repeat password" />
-															<i class="ace-icon-poker-blue fa fa-retweet"></i>
+															<i class="poker-blue-icon fa fa-retweet"></i>
 														</span>
 													</label>
 
-
+													<div class="space"></div>
+													
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-lg btn-primary btn-poker-blue">
-															<i class="ace-icon fa fa-sign-in fa-lg"></i>
+														<button type="button" class="width-65 btn btn-xlg btn-primary btn-poker-blue">
+															<i class="poker-blue-icon fa fa-sign-in fa-lg"></i>
 															<span class="bigger-110">Sign in</span>
 														</button>
 													</div>
@@ -180,7 +181,7 @@
 
 										<div class="toolbar center">
 											<a href="#" data-target="#login-box" class="back-to-login-link">
-												<i class="ace-icon fa fa-arrow-left"></i>
+												<i class="poker-green-icon fa fa-arrow-left"></i>
 												Back to login
 											</a>
 										</div>
