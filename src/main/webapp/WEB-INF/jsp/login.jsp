@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ include file="../tiles/taglib.jsp" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -16,7 +17,7 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<div class="login-container">
 							<div class="center">
-								<h1 class="bigger">
+								<h1 class="great">
 									<span class="poker-red">Home</span>
 									<span class="white" id="id-text2">Game Poker</span>
 								</h1>
@@ -38,7 +39,17 @@
 											<div class="space-6"></div>
 											
 											<!-- Login Form -->
-											<form action="<spring:url value="/login" />" method="POST">
+											<form action="<spring:url value="/login" />" method="POST" name="loginForm">
+											
+											<c:if test="${'fail' eq param.auth}">
+       											 <div class="alert alert-danger poker-red">
+               											 	Login Failed !
+         										</div>
+    										</c:if>
+    										
+											<c:if test="${param.registration eq true}">
+												<div class="alert alert-success poker-green">Registration successful !<br> Please check your <b>email</b> to activate account. </div>
+											</c:if>
 												<fieldset>
 													<label class="block clearfix" for="inputUsername">
 														<span class="block input-icon input-icon-right">
@@ -98,11 +109,11 @@
 												Retrieve Password
 											</h3>
 											<!-- Forgot Form -->
-											<form>
+											<form:form commandName="userRegistrationForm" method="POST" name="forgotForm"> <!-- odsyla do registration form naraZIE -->
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control txtFieldBigger" placeholder="Enter your email" />
+															<form:input path="email" type="email" class="form-control txtFieldBigger" name="email" placeholder="Enter your email" />
 															<i class="poker-red-icon fa fa-envelope"></i>
 														</span>
 													</label>
@@ -110,13 +121,13 @@
 													<div class="space"></div>
 
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-xlg btn-primary btn-poker-red">
+														<button type="submit" class="width-65 btn btn-xlg btn-primary btn-poker-red">
 															<i class="poker-red-icon fa fa-paper-plane fa-lg"></i>
 															<span class="bigger-110">Send Me !</span>
 														</button>
 													</div>
 												</fieldset>
-											</form>
+											</form:form>
 										</div><!-- /.widget-main -->
 
 										<div class="toolbar center">
@@ -129,6 +140,7 @@
 								</div><!-- /.forgot-box -->
 
 								<!-- Registration Frame -->
+								
 								<div id="signup-box" class="signup-box widget-box poker-blue no-border">
 									<div class="widget-body">
 										<div class="widget-main">
@@ -136,33 +148,34 @@
 												<i class="poker-blue-icon fa fa-users poker-blue"></i>
 												New User Registration
 											</h3>
-
-											<form>
+											
+											<form:form commandName="userRegistrationForm" method="POST" name="registrationForm">
 												<fieldset>
+													
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control txtFieldBigger" placeholder="Email" />
+															<form:input path="username" type="text" class="form-control txtFieldBigger" id="username" name="username" placeholder="Player name, nick ..." />
+															<i class="poker-blue-icon fa fa-user"></i>
+														</span>
+													</label>
+													
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<form:input path="email" type="email" class="form-control txtFieldBigger" name="email" placeholder="Email" />
 															<i class="poker-blue-icon fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control txtFieldBigger" placeholder="Username" />
-															<i class="poker-blue-icon fa fa-user"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control txtFieldBigger" placeholder="Password" />
+															<form:input path="password" type="password" class="form-control txtFieldBigger" name="password" placeholder="Password" />
 															<i class="poker-blue-icon fa fa-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control txtFieldBigger" placeholder="Repeat password" />
+															<form:input path="repeatPassword" type="password" class="form-control txtFieldBigger" name="repeatPassword" placeholder="Confirm password" />
 															<i class="poker-blue-icon fa fa-retweet"></i>
 														</span>
 													</label>
@@ -170,13 +183,13 @@
 													<div class="space"></div>
 													
 													<div class="clearfix text-center">
-														<button type="button" class="width-65 btn btn-xlg btn-primary btn-poker-blue">
+														<button type="submit" value="ghfg" class="width-65 btn btn-xlg btn-primary btn-poker-blue">
 															<i class="poker-blue-icon fa fa-sign-in fa-lg"></i>
 															<span class="bigger-110">Sign in</span>
 														</button>
 													</div>
 												</fieldset>
-											</form>
+											</form:form>
 										</div>
 
 										<div class="toolbar center">
@@ -200,6 +213,9 @@
 		<!--[if IE]>
 <script src="resources/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
+		<script src="resources/js/regform-validation.js"></script>
+		<script src="resources/js/loginform-validation.js"></script>
+		<script src="resources/js/forgotform-validation.js"></script>
 		<script type="text/javascript">
 			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
@@ -215,7 +231,13 @@
 			 });
 			});
 			
+			// alert Fade Out 
+			$(".alert").delay(5000).slideUp(200, function() {
+			    $(this).alert('close');
+			});
 			
 		</script>
+		
+		
 	</body>
 </html>

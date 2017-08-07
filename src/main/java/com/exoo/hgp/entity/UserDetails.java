@@ -81,6 +81,14 @@ public class UserDetails {
 	public void setPhotoURL(String photoURL) {
 		this.photoURL = photoURL;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 	
 	
 }

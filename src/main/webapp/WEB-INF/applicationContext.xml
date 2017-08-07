@@ -14,21 +14,21 @@
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 
-	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/homegamepokerdb" />
 		<property name="username" value="root" />
 		<property name="password" value="dbadmin" />
-	</bean> -->
+	</bean>
 	
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://homegamepokerdb.cmuiitf1mfhw.eu-west-1.rds.amazonaws.com:3306/HomeGamePokerDB" />
 		<property name="username" value="exoo" />
 		<property name="password" value="exoodbadmin" />
-	</bean>
+	</bean> -->
 	
 
 	<bean id="emf"
@@ -38,7 +38,7 @@
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 			</props>
 		</property>

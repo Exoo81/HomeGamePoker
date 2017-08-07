@@ -6,4 +6,8 @@ import com.exoo.hgp.entity.UserDetails;
 
 public interface UserDetailsRepository extends JpaRepository<UserDetails, Integer> {
 
+	UserDetails findByEmail(String email);
+
+	
+
 }

@@ -11,7 +11,12 @@
 		<intercept-url pattern="/index**" access="isAuthenticated()" />
 		<intercept-url pattern="/tournaments**" access="isAuthenticated()" />
 		
-		<form-login login-page="/login.html" />
+		 <form-login login-processing-url="/login" 
+		 				login-page="/login.html"
+            			username-parameter="username" 
+            			password-parameter="password"
+            			default-target-url="/index.html" 
+            			authentication-failure-url="/login.html?auth=fail" />
 		
 		<logout logout-url="/logout" />
 		<csrf disabled="true" /> 									<!-- for spring security 4 -->
