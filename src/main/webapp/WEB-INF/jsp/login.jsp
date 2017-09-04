@@ -41,15 +41,51 @@
 											<!-- Login Form -->
 											<form action="<spring:url value="/login" />" method="POST" name="loginForm">
 											
+											<!-- Login msg -->
 											<c:if test="${'fail' eq param.auth}">
-       											 <div class="alert alert-danger poker-red">
-               											 	Login Failed !
-         										</div>
+       											 <div class="alert alert-danger poker-red">Login Failed !</div>
     										</c:if>
     										
+    										<!-- Registration msg -->
 											<c:if test="${param.registration eq true}">
 												<div class="alert alert-success poker-green">Registration successful !<br> Please check your <b>email</b> to activate account. </div>
 											</c:if>
+											<c:if test="${param.registration eq '101'}">
+												<div class="alert alert-danger poker-red">Registration faild ! Try again.<br> Error 101. </div>
+											</c:if>
+											<c:if test="${param.registration eq '102'}">
+												<div class="alert alert-danger poker-red">Registration faild ! Try again.<br> Error 102. </div>
+											</c:if>
+											<c:if test="${param.registration eq '103'}">
+												<div class="alert alert-danger poker-red">There was a problem sending the activation message.<br> Error 103. </div>
+											</c:if>
+											
+											<!-- Account Activation msg -->
+											<c:if test="${param.activation eq true}">
+												<div class="alert alert-success poker-green">Your account has been activated.<br>Now you can login. </div>
+											</c:if>
+											<c:if test="${param.activation eq false}">
+												<div class="alert alert-danger poker-red">Account activation problem.<br>Error 100. </div>
+											</c:if>
+											
+											<!-- Forgot msg -->
+											<c:if test="${param.forgot eq true}">
+												<div class="alert alert-success poker-green">Follow the instructions in <b>email</b> sent to your mailbox.</div>
+											</c:if>
+											<c:if test="${param.forgot eq false}">
+												<div class="alert alert-danger poker-red">Sending mail failed.<br>Error 104. </div>
+											</c:if>
+											
+											<!-- change pass msg -->
+											<c:if test="${param.changePass eq true}">
+												<div class="alert alert-success poker-green">Password has been changed.</div>
+											</c:if>
+											<c:if test="${param.changePass eq false}">
+												<div class="alert alert-danger poker-red">Password change failed.<br>Error 105. </div>
+											</c:if>
+											
+											
+											
 												<fieldset>
 													<label class="block clearfix" for="inputUsername">
 														<span class="block input-icon input-icon-right">
@@ -109,11 +145,11 @@
 												Retrieve Password
 											</h3>
 											<!-- Forgot Form -->
-											<form:form commandName="userRegistrationForm" method="POST" name="forgotForm"> <!-- odsyla do registration form naraZIE -->
+											<form action="<spring:url value="/forgot.html" />" method="POST" name="forgotForm">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<form:input path="email" type="email" class="form-control txtFieldBigger" name="email" placeholder="Enter your email" />
+															<input type="email" class="form-control txtFieldBigger" name="email" placeholder="Enter your email" />
 															<i class="poker-red-icon fa fa-envelope"></i>
 														</span>
 													</label>
@@ -127,7 +163,7 @@
 														</button>
 													</div>
 												</fieldset>
-											</form:form>
+											</form>
 										</div><!-- /.widget-main -->
 
 										<div class="toolbar center">

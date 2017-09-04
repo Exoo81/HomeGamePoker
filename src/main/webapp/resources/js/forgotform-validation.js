@@ -1,6 +1,6 @@
 // Wait for the DOM to be ready
 $(function() {
-  // Registration form
+  // Forgot form
   $("form[name='forgotForm']").validate({
     // Specify validation rules
     rules: {

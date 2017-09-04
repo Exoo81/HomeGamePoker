@@ -16,6 +16,8 @@
 		
 		<!-- Resources -->
 		<spring:url value="/resources/css/poker.min.css" var="styleCSS" />
+		<spring:url value="/resources/css/font-awesome.min.css" var="fontAwesome" />
+		<spring:url value="/resources/css/fonts.googleapis.com.css" var="fontGoogle" />
 		<%-- <spring:url value="/resources/js/tooltip.js" var="tooltipJS" />
 		<spring:url value="/resources/js/triggerRemove.js" var="triggerRemove" /> --%>
 		
@@ -29,9 +31,8 @@
 		<!-- Awesome fonts -->
 		<!-- <script src="https://use.fontawesome.com/969da422e1.js"></script> -->
 		<!-- Fonts -->
-		<link rel="stylesheet" href="resources/css/font-awesome.min.css">
-		<link rel="stylesheet" href="resources/css/fonts.googleapis.com.css">
-		
+		<link href="${fontAwesome}" rel="stylesheet"/>
+		<link href="${fontGoogle}" rel="stylesheet"/>
 		
 		<!-- JS -->
 		<%-- <script src="${tooltipJS}"></script> --%>

@@ -6,6 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+
 	<properties>
 		<org.springframework.version>4.3.1.RELEASE</org.springframework.version>
 		<spring.security.version>4.2.0.RELEASE</spring.security.version>
@@ -13,8 +14,15 @@
 	</properties>
 
 	<dependencies>
+	
+	<dependency>
+		<groupId>javax.mail</groupId>
+		<artifactId>mail</artifactId>
+		<version>1.4.7</version>
+	</dependency>
 
-		<!-- Spring Security -->
+
+	<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
@@ -222,7 +230,6 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-
 			</plugin>
 		</plugins>
 	</build>

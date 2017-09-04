@@ -33,7 +33,7 @@ public class InitDB {
 	
 	@PostConstruct
 	public void init(){
-		//createDB();
+		createDB();
 	}
 	
 	private void createDB(){
@@ -50,7 +50,8 @@ public class InitDB {
 		/*USER*/
 		User adminUser = new User();
 		adminUser.setUsername("exoo");
-		adminUser.setPassword("klocek123");
+		adminUser.setPassword("klocek12");
+		adminUser.setEnabled(true);
 		List<Role> adminRolesList = new ArrayList<Role>();
 			adminRolesList.add(adminRole);
 			adminRolesList.add(playerRole);

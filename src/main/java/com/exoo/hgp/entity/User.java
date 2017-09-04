@@ -27,6 +27,7 @@ public class User {
 	@Column(nullable=false)
 	private String password;
 	
+	
 	private boolean enabled;
 	
 	@ManyToMany
@@ -35,6 +36,11 @@ public class User {
 	
 	@OneToOne(mappedBy="user", cascade=CascadeType.REMOVE)
 	private UserDetails userDetails;
+	
+	@OneToOne(mappedBy="user", cascade=CascadeType.REMOVE)		
+	private VerificationToken verificationToken;				
+	
+
 
 	public Integer getId() {
 		return id;
@@ -82,6 +88,14 @@ public class User {
 
 	public void setUserDetails(UserDetails userDetails) {
 		this.userDetails = userDetails;
+	}
+
+	public VerificationToken getVerificationToken() {
+		return verificationToken;
+	}
+
+	public void setVerificationToken(VerificationToken verificationToken) {
+		this.verificationToken = verificationToken;
 	}
 	
 

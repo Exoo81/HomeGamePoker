@@ -62,8 +62,6 @@ $(function() {
     	  equalTo: "Confirm your password"
       }
      
-      
-      
     },
     submitHandler: function(form) {
       form.submit();

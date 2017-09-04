@@ -8,6 +8,8 @@
 
 	<http>
 		<intercept-url pattern="/login**" access="! isAuthenticated()" />
+		<intercept-url pattern="/login/forgot**" access="! isAuthenticated()" />
+		<intercept-url pattern="/change_password**" access="! isAuthenticated()" />
 		<intercept-url pattern="/index**" access="isAuthenticated()" />
 		<intercept-url pattern="/tournaments**" access="isAuthenticated()" />
 		
@@ -24,9 +26,28 @@
 
 	<authentication-manager>
 		<authentication-provider>
-			<user-service>
+			<!-- <user-service>
 				<user name="exoo" password="klocek12" authorities="ROLE_PLAYER, ROLE_ADMIN" />
-			</user-service>
+			</user-service> -->
+			<!-- local -->
+			<jdbc-user-service data-source-ref="dataSource"    
+	                 			authorities-by-username-query="SELECT user.username, role.role_name FROM
+                                                       homegamepokerdb.user 
+                                                      JOIN homegamepokerdb.user_role on user.id = user_role.user_id
+							  						  JOIN homegamepokerdb.role  on user_role.roles_id = role.id
+							  						  WHERE user.username = ?" 
+			  					users-by-username-query="SELECT username, password,enabled from homegamepokerdb.user 
+                                                      where username=?"/>
+            <!-- AMAZONE -->
+            <!-- <jdbc-user-service data-source-ref="dataSource"    
+	                 			authorities-by-username-query="SELECT user.username, role.role_name FROM
+                                                       HomeGamePokerDB.user 
+                                                      JOIN HomeGamePokerDB.user_role on user.id = user_role.user_id
+							  						  JOIN HomeGamePokerDB.role  on user_role.roles_id = role.id
+							  						  WHERE user.username = ?" 
+			  					users-by-username-query="SELECT username, password,enabled from HomeGamePokerDB.user 
+                                                      where username=?"/> -->
+			
 		</authentication-provider>
 	</authentication-manager>
 
