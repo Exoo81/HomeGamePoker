@@ -89,14 +89,16 @@
 												<fieldset>
 													<label class="block clearfix" for="inputUsername">
 														<span class="block input-icon input-icon-right">
-															<input class="form-control txtFieldBigger" type="text" name="username" id="inputUsername" placeholder="Username" required autofocus />
+															<input class="form-control txtFieldBigger" type="text" name="username" id="inputUsername" placeholder="Username" required autofocus 
+															value="exoo" />
 															<i class="poker-green-icon fa fa-user fa-lg"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix" for="inputPassword">
 														<span class="block input-icon input-icon-right">
-															<input class="form-control txtFieldBigger" type="password" name="password" id="inputPassword" placeholder="Password" required/>
+															<input class="form-control txtFieldBigger" type="password" name="password" id="inputPassword" placeholder="Password" required
+															value="klocek12"/>
 															<i class="poker-green-icon fa fa-lock"></i>
 														</span>
 													</label>

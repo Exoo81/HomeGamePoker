@@ -8,22 +8,33 @@
 <head>
 <!-- HGP -->
 <!-- JQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+		<spring:url value="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" var="jqueryJs" />
+		<script src="${jqueryJs}"></script>
+		<!-- <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
+		<spring:url value="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" var="jquery-UIJs" />
+		<script src="${jquery-UIJs}"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script> -->
+		<spring:url value="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js" var="jqueryValidateJs" />
+		<script src="${jqueryValidateJs}"></script>
 		<!-- minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		
+		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+		<spring:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" var="bootstrapJs" />
+		<script src="${bootstrapJs}"></script>
+			
+		<!-- minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+		<link href="https://fonts.googleapis.com/css?family=Jura|Questrial|Rajdhani|Titillium+Web" rel="stylesheet">
 		<!-- Resources -->
-		<spring:url value="/resources/css/poker.min.css" var="styleCSS" />
+		<spring:url value="/resources/css/poker1.min.css" var="styleCSS" />
 		<spring:url value="/resources/css/font-awesome.min.css" var="fontAwesome" />
 		<spring:url value="/resources/css/fonts.googleapis.com.css" var="fontGoogle" />
 		<%-- <spring:url value="/resources/js/tooltip.js" var="tooltipJS" />
 		<spring:url value="/resources/js/triggerRemove.js" var="triggerRemove" /> --%>
 		
-		<!-- minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+		
+		
 		<!-- Custom CSS style -->
 		<link href="${styleCSS}" rel="stylesheet"/>
 		<!-- theme -->
@@ -80,19 +91,25 @@
 				<!-- END mobile side menu button -->
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a class="navbar-brand" href='<spring:url value="/news/1.html" />'>
+							<span><img class="nav-logo" src="<c:url value="/resources/img/logo.png"/>"/></span>
 							<span class="poker-red">Home</span>
 							<span class="white">Game Poker</span>	
 					</a>
 				</div>
+				<%-- <div class="navbar-header">
+					<a class="navbar-brand" href='<spring:url value="/news/1.html" />'>
+					<img class="nav-logo" src="resources/img/logo.png" alt="" />
+					</a>
+				</div> --%>
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav poker-nav">
 						
 						<li class="poker-green dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="resources/img/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="resources/img/avatars/user.jpg" alt="" />
 								<span>
-									Hi, ${palyerName}
+									Hi, ${player.username}
 								</span>
 
 								<i class="poker-icon fa fa-caret-down"></i>
@@ -146,7 +163,16 @@
 				<ul class="nav nav-list">
 					
 					<li class="${activePage == 'index' ? 'active' : ''}">
-						<a href="index.html">
+						<a href='<spring:url value="/index.html" />'>
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> Dashboard </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					
+					<li class="${activePage == 'news' ? 'active' : ''}">
+						<a href='<spring:url value="/news/1.html" />'>
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> News </span>
 						</a>
@@ -155,7 +181,7 @@
 					</li>
 					
 					<li class="${activePage == 'tournaments' ? 'active' : ''}">
-						<a href="tournaments.html">
+						<a href='<spring:url value="/tournaments.html" />'>
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Tournaments </span>
 						</a>
@@ -174,7 +200,7 @@
 				 
 
 					<div class="page-content">
-						<security:authorize access="isAuthenticated()">
+						<%-- <security:authorize access="isAuthenticated()">
 						<div class="page-header">
 							<h1>
 								Dashboard
@@ -184,7 +210,7 @@
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
-						</security:authorize>
+						</security:authorize> --%>
 
 						<div class="row">
 							<div class="col-xs-12">
@@ -268,7 +294,8 @@
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
 			<!-- mobile menu -->
-			<script src="resources/js/hgp.min.js"></script>		<!-- <script src="assets/js/ace.min.js"></script> -->
+			<spring:url value="/resources/js/hgp.min.js" var="hgpJs" />
+			<script src="${hgpJs}"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">

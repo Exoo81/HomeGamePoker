@@ -5,5 +5,7 @@
 		<class>com.exoo.hgp.entity.UserDetails</class>
 		<class>com.exoo.hgp.entity.Role</class>
 		<class>com.exoo.hgp.entity.VerificationToken</class>
+		<class>com.exoo.hgp.entity.News</class>
+		<class>com.exoo.hgp.entity.Comment</class>
 	</persistence-unit>
 </persistence>

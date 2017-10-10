@@ -2,8 +2,6 @@ package com.exoo.hgp.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +12,6 @@ import com.exoo.hgp.entity.UserDetails;
 import com.exoo.hgp.repository.RoleRepository;
 import com.exoo.hgp.repository.UserDetailsRepository;
 import com.exoo.hgp.repository.UserRepository;
-import com.exoo.hgp.repository.VerificationTokenRepository;
 import com.exoo.hgp.utility.UserRegistrationWrapper;
 
 @Service

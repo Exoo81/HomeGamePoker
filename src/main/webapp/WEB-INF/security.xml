@@ -11,7 +11,9 @@
 		<intercept-url pattern="/login/forgot**" access="! isAuthenticated()" />
 		<intercept-url pattern="/change_password**" access="! isAuthenticated()" />
 		<intercept-url pattern="/index**" access="isAuthenticated()" />
+		<intercept-url pattern="/news/**" access="isAuthenticated()" />
 		<intercept-url pattern="/tournaments**" access="isAuthenticated()" />
+		
 		
 		 <form-login login-processing-url="/login" 
 		 				login-page="/login.html"

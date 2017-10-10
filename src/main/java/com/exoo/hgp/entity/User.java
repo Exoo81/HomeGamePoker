@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -38,10 +39,15 @@ public class User {
 	private UserDetails userDetails;
 	
 	@OneToOne(mappedBy="user", cascade=CascadeType.REMOVE)		
-	private VerificationToken verificationToken;				
+	private VerificationToken verificationToken;
 	
-
-
+	@OneToMany(mappedBy="author")
+	private List<News> newsList;
+	
+	@OneToMany(mappedBy="author")
+	private List<Comment> commentsList;
+	
+	
 	public Integer getId() {
 		return id;
 	}
